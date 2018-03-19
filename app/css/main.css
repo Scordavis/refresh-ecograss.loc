@@ -1,7 +1,81 @@
 @font-face {
-  font-family: 'Comfortaa';
+  font-family: 'PT Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('Comfortaa Regular'), local('Comfortaa-Regular'), url(https://fonts.gstatic.com/s/comfortaa/v12/qLBu5CQmSMt1H43OiWJ77aCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+  src: local('PT Sans'), local('PTSans-Regular'), url(https://fonts.gstatic.com/s/ptsans/v9/jizaRExUiTo99u79D0aEwA.ttf) format('truetype');
 }
-
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('PT Sans Bold'), local('PTSans-Bold'), url(https://fonts.gstatic.com/s/ptsans/v9/jizfRExUiTo99u79B_mh0OqtKA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu5mxP.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fABc9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfABc9.ttf) format('truetype');
+}
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+.main-button {
+  min-width: 180px;
+  min-height: 36px;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  background-color: #ffdd00;
+  color: #808080;
+  border-color: transparent;
+  font-size: 18px;
+  font-weight: 400;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.main-button:hover {
+  background-color: #e6c700;
+  border-color: #b39b00;
+  color: white;
+}
+.screen-intro {
+  position: relative;
+  min-height: 970px;
+  background-image: url(../img/bg-intro.jpg);
+  background-position: 0 0;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+.screen-intro__content-wrapper {
+  display: block;
+  position: relative;
+  width: 1530px;
+}
+.navbar-transparent {
+  min-height: 120px;
+}
+.navbar-transparent .navbar-logo {
+  display: block;
+  max-width: 262px;
+}
+.navbar-transparent .main-button {
+  color: #0b420b;
+}
+.navbar-transparent .main-button:hover {
+  color: white;
+}

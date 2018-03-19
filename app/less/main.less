@@ -2,6 +2,63 @@
 @import 'vars.less';
 
 body{
+	font-family: @mainFont;
+	font-size: @defoltSize;
+	font-weight: @reg;
+
 }
+// components
+.main-button{
+	min-width: 180px;
+	min-height: 36px;
+	padding-top: 2px;
+	padding-bottom: 4px;
+	background-color: @yellowColor;
+	color: @greyColor;
+	border-color: transparent;
+	font-size: @defoltSize;
+	font-weight: @reg;
+	.transition(.3s);
+	&:hover{
+		background-color: darken(@yellowColor, 5%);
+		border-color: darken(@yellowColor, 15%);
+		color: white;
+	}
+}
+// components
+
+// start screen-intro
+.screen-intro{
+	position: relative;
+	min-height: 970px;
+	background-image: url(../img/bg-intro.jpg);
+	background-position: 0 0;
+	background-size: cover;
+	&__content-wrapper{
+		display: block;
+		position: relative;
+		width: 1530px;
+
+	}
+
+}
+// start navbar
+.navbar-transparent{
+	min-height: 120px;
+	.navbar-logo{
+		display: block;
+		max-width: 262px;
+
+	}
+	.main-button{
+		color: darken(@headingColor, 20%);
+		&:hover{
+			color: white;
+		}
+	}
+
+}
+// end navbar
+// end screen-intro
 
 @import '_media';

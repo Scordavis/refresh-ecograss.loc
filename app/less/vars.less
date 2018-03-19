@@ -1,12 +1,31 @@
 // fonts variable
-@defoltFont: 'Comfortaa', cursive;
+@mainFont: 'PT Sans', sans-serif;
+@secondFont: 'Roboto', sans-serif;
 
 // color variable
-@mainColor: #ead28b;
+@headingColor: #1a991a;
+@greyColor: #808080;
+@yellowColor: #ffdd00;
+@maroon: #91261b;
 
 // typografy
-@defoltSize: 16px;
-@light: 300;
+@defoltSize: 18px;
 @reg: 400;
+@med: 500;
 @bold: 700;
 @defoltLineHeight: 1.5;
+
+
+// transition
+.transition (@transition) {
+	-webkit-transition: @transition;
+	-moz-transition:    @transition;
+	-ms-transition:     @transition;
+	-o-transition:      @transition;
+}
+.transition-delay (@delay) {
+	-webkit-transition-delay: @delay;
+	-moz-transition-delay:    @delay;
+	-ms-transition-delay:     @delay;
+	-o-transition-delay:      @delay;
+}

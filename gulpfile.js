@@ -34,8 +34,8 @@ gulp.task('less', function() {
 // слияние скриптов в один и минифицирование его
 gulp.task('scripts', function(){
 	return gulp.src([
-		// 'app/libs/jquery/dist/jquery.min.js',
-		// 'app/libs/respond/dist/respond.min.js',
+		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/respond/dist/respond.min.js',
 		])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
