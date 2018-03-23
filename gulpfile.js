@@ -35,8 +35,7 @@ gulp.task('less', function() {
 gulp.task('scripts', function(){
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		// 'app/libs/respond/dist/respond.min.js',
-		'app/libs/respond/dist/jquery.fancybox.js',
+		'app/libs/fancybox/dist/jquery.fancybox.js',
 		'app/libs/respond/dist/jquery.maskedinput.js',
 		])
 	.pipe(concat('libs.min.js'))
