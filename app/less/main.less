@@ -2,6 +2,7 @@
 @import 'vars.less';
 
 body{
+	min-width: 460px;
 	font-family: @mainFont;
 	font-size: @defoltSize;
 	font-weight: @reg;
@@ -9,9 +10,9 @@ body{
 }
 // components
 .content-wrapper{
-	display: block;
+	// display: block;
 	position: relative;
-	width: 1530px;
+	width: 85%;
 
 }
 .b-padding{
@@ -24,6 +25,7 @@ body{
 	font-family: @secondFont;
 	font-size: 36px;
 	font-weight: @bold;
+	letter-spacing: 1px;
 	color: @headingColor;
 
 }
@@ -53,9 +55,10 @@ body{
 }
 .ordered-price{
 	font-weight: @reg;
-}
 
+}
 .main-button{
+	position: relative;
 	min-width: 180px;
 	min-height: 36px;
 	padding-top: 2px;
@@ -63,13 +66,112 @@ body{
 	background-color: @yellowColor;
 	color: @greyColor;
 	border-color: transparent;
+	outline: none;
 	font-size: @defoltSize;
 	font-weight: @reg;
 	.transition(.3s);
 	&:hover{
-		background-color: darken(@yellowColor, 5%);
-		border-color: darken(@yellowColor, 15%);
+		background-color: lighten(@yellowColor, 5%);
+		border-color: @yellowColor;
+		box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+		outline: none;
+		// color: white;
+
+	}
+	&:focus, &:active{
+		background-color: @yellowColor;
+		border-color: transparent;
+		outline: none;
+
+	}
+	&:active&:hover{
+		background-color: @yellowColor;
+		border-color: transparent;
+		outline: none;
+
+	}
+	&--green{
+		display: block;
+		background-color: @headingColor;
 		color: white;
+		min-width: 180px;
+		min-height: 36px;
+		margin: auto;
+		.transition(.2s);
+		&:hover{
+			background-color: darken(@headingColor, 2%);
+			color: darken(white, 10%);
+			border-color: @headingColor;
+			box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+
+		}
+		&:focus, &:active{
+			background-color: @headingColor;
+			border-color: transparent;
+			outline: none;
+
+		}
+		&:visited{
+			background-color: @headingColor;
+
+		}
+		&:active&:hover{
+			background-color: @headingColor;
+			border-color: transparent;
+			outline: none;
+
+		}
+
+	}
+
+}
+
+.form-button{
+	min-width: 230px;
+	min-height: 36px;
+	padding-top: 2px;
+	padding-bottom: 4px;
+	background-color: @maroon;
+	color: white;
+	border-color: 1px solid darken(white, 13%);
+	font-size: (@defoltSize - 4);
+	font-weight: @reg;
+	.transition(.3s);
+	&:hover{
+		background-color: darken(@maroon, 5%);
+
+	}
+	&:focus, &:active{
+		border-color: transparent;
+		outline: none;
+
+	}
+	&:visited{
+
+	}
+	&:active&:hover{
+		border-color: transparent;
+		outline: none;
+
+	}
+
+}
+.button-pointer{
+	position: relative;
+	&:after{
+		position: absolute;
+		top: 80%;
+		left: 45%;
+		width: 34px;
+		height: auto;
+		content: url(../img/pointer-shadow.svg);
+		.transition(.3s);
+
+	}
+	&:hover{
+		&:after{
+			top: 110%;
+		}
 
 	}
 
@@ -85,6 +187,43 @@ body{
 }
 .bg-white-transparent{
 	background-color: fade(white, 50%);
+
+}
+.divider{
+	margin-bottom: 40px;
+	&__opacity{
+		opacity: 0;
+	}
+
+}
+.transparent-layer{
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: fade(white, 80%);
+
+}
+.home-link{
+	width: fit-content;
+	margin-top: 36px;
+	margin-bottom: -36px;
+	color: @headingColor;
+	text-decoration: underline;
+	&:hover, &:focus, &:active{
+		color: @headingColor;
+		text-decoration: none;
+
+	}
+	&__wrapper{
+		background-color: darken(white, 4%);
+
+	}
+
 }
 // components
 
@@ -93,12 +232,12 @@ body{
 	position: relative;
 	min-height: 970px;
 	background-image: url(../img/bg-intro2.jpg);
-	background-position: 0 0;
+	background-position: center;
 	background-size: cover;
 	color: white;
 
 	&__site-heading{
-		margin-top: 100px;
+		margin-top: 5vw;
 		font-family: @secondFont;
 		font-weight: @bold;
 
@@ -121,6 +260,10 @@ body{
 	}
 
 
+}
+.direction-page-navbar{
+	background-color: @headingColor;
+	color: white;
 }
 // start navbar
 .navbar-transparent{
@@ -149,7 +292,7 @@ body{
 	.main-button{
 		color: darken(@headingColor, 20%);
 		&:hover{
-			color: white;
+			// color: white;
 		}
 	}
 
@@ -187,19 +330,16 @@ body{
 		margin-bottom: 14px;
 
 	}
-	.form-button{
-		min-width: 230px;
-		min-height: 36px;
-		padding-top: 2px;
-		padding-bottom: 4px;
-		background-color: @maroon;
-		color: white;
-		border-color: 1px solid darken(white, 13%);
-		font-size: (@defoltSize - 4);
-		font-weight: @reg;
+	&__success{
+		width: fit-content;
+		margin: auto;
+		clear: both;
+		padding: 4px 6px;
+		background-color: @yellowColor;
+		opacity: 0;
 		.transition(.3s);
-		&:hover{
-			background-color: darken(@maroon, 5%);
+		&.active{
+			opacity: 1;
 
 		}
 
@@ -207,7 +347,7 @@ body{
 
 }
 // wide-form
-// four-card
+// start four-card
 .four-card{
 	background-color: darken(white, 4%);
 	&__ordered-list{
@@ -216,6 +356,7 @@ body{
 	}
 	// group-grass
 	.group-grass{
+		margin-top: 60px;
 		&__header{
 			display: flex;
 			align-items: center;
@@ -228,8 +369,7 @@ body{
 
 		}
 		&__header-image{
-			// box-shadow: 4px	4px 30px fade(black, 60%);
-			box-shadow: 4px 2px 5px 0.2px rgba(0, 1, 5, 0.34);
+			box-shadow: 0px 8px 23px 1px rgba(0, 1, 5, 0.43);
 
 		}
 		&__header-text{
@@ -247,11 +387,16 @@ body{
 
 		}
 		&__card{
-			min-height: 775px;
+			min-height: 745px;
 			padding: 18px;
 			color: white;
 			&--green{
 				background-color: @cardGreen;
+
+			}
+			&--cyan{
+				background-color: @cardCyan;
+
 			}
 
 		}
@@ -281,7 +426,10 @@ body{
 			outline: none;
 			border: none;
 			button{
-				background-color: fade(white, 90%);
+				background-color: fade(white, 100%);
+			}
+			.watermark{
+				opacity: .7;
 			}
 
 		}
@@ -319,10 +467,24 @@ body{
 			border: none;
 
 		}
+		&__watermark{
+			position: absolute;
+			max-width: 200px;
+			right: 0;
+			top: 0;
+			margin: 30px 10px;
+			opacity: 1;
+			.transition(.3s);
+
+		}
 		&__card-heading{
-			margin-top: 40px;
-			margin-bottom: 28px;
+			margin-top: 28px;
 			font-family: @secondFont;
+			&--description{
+				min-height: 44px;
+				margin-bottom: 4px;
+				line-height: 1.2;
+			}
 
 		}
 		&__content-wrapper{
@@ -331,7 +493,10 @@ body{
 		}
 		&__table{
 			width: 100%;
-			min-height: 150px;
+			min-height: 110px;
+			margin-bottom: 24px;
+			padding-top: 10px;
+			border-top: 1px solid white;
 
 		}
 		&__row{
@@ -352,6 +517,15 @@ body{
 					text-align: right;
 
 				}
+				&--accent{
+					display: block;
+					width: 100%;
+					margin-top: 12px;
+					float: none;
+					font-weight: @bold;
+					text-transform: uppercase;
+
+				}
 
 		}
 		&__logo-wrapper{
@@ -359,11 +533,21 @@ body{
 
 		}
 		&__price{
+			margin-bottom: 0;
+			clear: both;
 			text-align: center;
 			font-family: @secondFont;
 			font-weight: @bold;
 			font-size: 24px;
-			margin-bottom: 32px;
+			&--description{
+				margin-bottom: 12px;
+				min-height: 48px;
+				font-size: 14px;
+				font-weight: inherit;
+				line-height: 1;
+
+
+			}
 
 		}
 
@@ -371,6 +555,548 @@ body{
 	// group-grass
 
 }
-// four-card
+// end four-card
+// start catalog-intro
+.catalog-intro{
+	&__jutaLogo{
+		max-width: 318px;
+		float: right;
+		margin-top: 26px;
+		margin-right: 15px;
+
+	}
+	&__catalog-card{
+		margin-bottom: 50px;
+
+	}
+	&__preview-wrapper{
+		position: relative;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 345px;
+		margin-bottom: 24px;
+		cursor: pointer;
+		.transition(.2s);
+		&:hover{
+			box-shadow: 0px 8px 23px 1px rgba(0, 1, 5, 0.43);
+
+		}
+
+	}
+	&__preview-img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+
+	}
+	&__preview-heading{
+		position: absolute;
+		width: 100%;
+		padding: 0 12px 0 18px;
+		margin: 0;
+		color: white;
+		font-family: @secondFont;
+		font-size: 36px;
+		font-weight: @med;
+		text-transform: uppercase;
+		word-wrap: break-word;
+		text-shadow: 0px 4px 22px rgba(0, 1, 5, 1);
+
+	}
+	&__link{
+		position: relative;
+		padding: 10px 10px 10px 12px;
+		color: @greyColor;
+		font-size: 24px;
+		.transition(.2s);
+		&:after{
+			position: absolute;
+			top: 12px;
+			right: 0px;
+			content: '>';
+			opacity: 0;
+			color: @headingColor;
+			font-weight: @bold;
+			.transition(.2s);
+
+		}
+		&:hover, &.jqhover{
+			color: @headingColor;
+			text-decoration: none;
+			&:after{
+				opacity: 1;
+				right: -10px;
+
+			}
+
+		}
+		&:active{
+			color: @headingColor;
+			text-decoration: none;
+
+		}
+		&:focus{
+			color: @headingColor;
+			text-decoration: none;
+
+		}
+
+	}
+
+}
+// end catalog-intro
+// start form-block
+.form-block{
+	position: relative;
+	background-position: 100% 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	&__bg-1{
+		background-image: url(../img/form-bg-1.jpg);
+
+	}
+	&__bg-2{
+		background-image: url(../img/form-bg-2.jpg);
+
+	}
+	&__heading{
+		color: @greyColor;
+
+	}
+}
+// end form-block
+// start addons
+.addons{
+	&__card{
+		color: white;
+		padding: 18px;
+		&--maroon{
+			background-color: @cardMaroon;
+
+		}
+		&--green{
+			background-color: @cardGreen;
+
+		}
+		&--cyan{
+			background-color: @cardCyan;
+
+		}
+		&--sand{
+			background-color: @cardSand;
+
+		}
+		&-header{
+			display: flex;
+			flex-direction: row;
+			align-items: end;
+			margin-bottom: 30px;
+
+		}
+		&-img{
+			max-width: 50%;
+			margin-right: 14px;
+
+		}
+		&-heading{
+			font-family: @secondFont;
+			font-size: 24px;
+			line-height: 1.2;
+
+		}
+		&-footer{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 10px;
+
+		}
+		&-price{
+			margin-bottom: 0;
+			font-family: @secondFont;
+			font-size: 24px;
+			font-weight: @reg;
+			float: left;
+			span{
+				font-weight: @bold;
+
+			}
+
+		}
+		&-button{
+			float: right;
+
+		}
+
+	}
+	&__description{
+		min-height: 100px;
+
+	}
+
+}
+// end addons
+// start promo
+.promo{
+	border-top: 15px solid @headingColor;
+	border-bottom: 15px solid @headingColor;
+	color: @greyColor;
+	&__wrapper{
+	display: flex;
+	align-items: center;
+
+	}
+	&__heading{
+		margin-top: 0;
+		padding-right: 30px;
+		font-family: @secondFont;
+		font-size: 24px;
+		font-weight: @bold;
+		text-align: left;
+		line-height: 1.2;
+		span{
+			text-transform: uppercase;
+			padding: 2px 5px;
+			background-color: @yellowColor;
+
+		}
+
+	}
+	&__logo{}
+	&__logo-img{
+		max-width: 260px;
+
+	}
+	&__description{
+		font-family: @mainFont;
+		font-size: 18px;
+		text-align: right;
+		span{
+			padding: 2px 5px;
+			background-color: @yellowColor;
+
+		}
+
+	}
+
+}
+// end promo
+// start gallery
+.gallery{
+	&__row{
+		margin-bottom: 30px;
+
+	}
+	&__img-wrapper{
+		// width: auto;
+		height: 230px;
+		&:hover, &:active, &:focus, &:visited{
+			border: none;
+			outline: none;
+
+		}
+
+	}
+	&__img{
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+		.transition(.2s);
+		&:hover{
+			box-shadow: 0px 8px 23px 1px rgba(0, 1, 5, 0.43);
+
+		}
+
+	}
+
+}
+// end gallery
+// start direction
+.direction{
+	padding-bottom: 20px;
+	background-color: darken(white, 4%);
+
+	&__row{
+		margin-bottom: 30px;
+
+	}
+	&__wrapper{
+		min-height: 500px;
+		margin-bottom: 6vw;
+
+	}
+	&__img-wrapper{
+		// width: auto;
+		height: 20vw;
+
+	}
+	&__img{
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+		margin-bottom: 30px;
+		border: 18px solid @cardCyan;
+
+	}
+	&__name{
+		margin-bottom: 28px;
+		padding-left: 16px;
+		color: @grassGreen;
+		font-family: @secondFont;
+		font-size: 24px;
+		font-weight: @bold;
+
+	}
+
+}
+// end direction
+// start table-block
+.table{
+	border-top: 15px solid @headingColor;
+	border-bottom: 15px solid @headingColor;
+	margin-bottom: 0;
+
+	&__wrapper{
+
+	}
+
+}
+
+.feature{
+	width: 100%;
+
+	&__row{
+		color: darken(white, 50%);
+		height: 40px;
+		background-color: darken(white, 2%);
+		&:nth-child(odd){
+			background-color: darken(white, 6%);
+
+		}
+		&:first-child{
+
+		}
+		&--header{
+			height: 100px;
+			color: darken(white, 70%);
+			font-weight: @bold;
+			background-color: transparent;
+
+		}
+
+	}
+	&__data{
+		padding: 4px 12px;
+
+	}
+	&__img{
+		max-width: 182px;
+	}
+
+}
+// end table-block
+// start brand
+.brand{
+	&__img{
+		max-width: 245px;
+		margin: 70px auto;
+
+	}
+
+}
+// start brand
+// start map
+.map{
+	position: relative;
+	height: 600px;
+	&__wrapper{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: @cardSand;
+
+	}
+	&__content{
+		height: 100%;
+		display: flex;
+		align-items: center;
+
+	}
+	&__contacts{
+		min-height: 540px;
+		background-color: @cardMaroon;
+		color: white;
+		padding: 30px 35px;
+		&-heading{
+			margin-top: 0;
+			font-family: @secondFont;
+			font-size: 36px;
+			font-weight: @bold;
+			letter-spacing: 2px;
+			border-bottom: 2px solid white;
+
+		}
+		&-text{
+			margin-top: 60px;
+			font-size: 24px;
+			font-weight: @reg;
+			line-height: 1;
+
+		}
+
+	}
+
+}
+// end map
+// start footer
+.site-footer{
+	height: 250px;
+	background-color: @headingColor;
+	color: white;
+	font-size: 14px;
+	&-wrapper{
+		height: 100%;
+		display: flex;
+		align-items: center;
+
+	}
+	&__item{
+		min-height: 80px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&--left{
+			text-align: left;
+
+		}
+		&--center{
+			text-align: center;
+
+		}
+		&--right{
+			text-align: right;
+
+		}
+
+	}
+	&__text{
+		width: 100%;
+		margin-bottom: 40px;
+		&:last-of-type{
+			margin-bottom: 0;
+
+		}
+		a, a:hover, a:active, a:focus, a:visited{
+			color: white;
+			text-decoration: underline;
+
+		}
+		a:hover{
+			text-decoration: none;
+			opacity: 0.8;
+
+		}
+		#dev-link{
+			position: relative;
+			text-decoration: none;
+			&:after{
+				display: block;
+				position: absolute;
+				right: 0;
+				content: url(../img/dev.svg);
+				width: 28px;
+				transform: scaleY(0.1);
+				opacity: 0;
+				.transition(0.2s);
+
+			}
+			&:hover{
+				&:after{
+					transform: scaleY(1);
+					opacity: 1;
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+// end footer
+.year{
+	margin: 10px auto;
+	font-size: 14px;
+	color: @greyColor;
+}
+
+// start modals
+.modal-form{
+	position: relative;
+	width: 600px;
+	background-color: darken(white, 4%);
+	overflow-x: visible;
+	&__wrapper{
+		padding: 10px 14px;
+		text-align: center;
+
+	}
+	&__heading{
+		width: 80%;
+		margin: 0 auto 20px;
+
+	}
+	&__description{}
+	&__form{}
+	&__input{
+		margin-bottom: 14px;
+
+	}
+	&__button{
+		min-height: 44px;
+		&:hover{
+			color: darken(white, 10%);
+
+		}
+
+	}
+	&__thanks{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: -100%;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		padding: 12px;
+		text-align: center;
+		background-color: white;
+		.transition(.3s);
+		&-heading{
+			font-size: 36px;
+			font-weight: @bold;
+			margin-top: 20px;
+
+		}
+		&-text{
+			margin-bottom: 36px;
+		}
+		&-logo{}
+		&.active{
+			top: 0;
+		}
+
+	}
+
+}
+// end modals
+
 
 @import '_media';

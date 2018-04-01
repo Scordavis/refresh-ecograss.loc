@@ -34,9 +34,9 @@ gulp.task('less', function() {
 // слияние скриптов в один и минифицирование его
 gulp.task('scripts', function(){
 	return gulp.src([
-		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/jquery/dist/jquery.js',
 		'app/libs/fancybox/dist/jquery.fancybox.js',
-		'app/libs/respond/dist/jquery.maskedinput.js',
+		'app/libs/jquery.maskedinput/dist/jquery.maskedinput.js',
 		])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
@@ -93,12 +93,12 @@ gulp.task('clear', function(){
 // работа с изображениями
 gulp.task('img', function(){
 	return gulp.src('app/img/**/*')
-	.pipe(cache(imagemin({
-		interlaced: true,
-		progressive: true,
-		svgoPlugins: [{removeViewBox: false}],
-		use: [pngquant()]
-	})))
+	// .pipe(cache(imagemin({
+	// 	interlaced: true,
+	// 	progressive: true,
+	// 	svgoPlugins: [{removeViewBox: false}],
+	// 	use: [pngquant()]
+	// })))
 	.pipe(gulp.dest('dist/img'));
 });
 
