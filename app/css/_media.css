@@ -143,6 +143,38 @@
   }
 }
 @media screen and (max-width: 991px) {
+  .navbar-transparent {
+    min-height: 100px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar-transparent .navbar-logo {
+    max-width: 150px;
+  }
+  .navbar-transparent .navbar-text {
+    font-size: 18px;
+  }
+  .navbar-transparent .phone-block {
+    font-size: 18px;
+  }
+  #js-fixed-navbar {
+    position: fixed;
+    display: none;
+    width: 100%;
+    background-color: #1a991a;
+    color: white;
+    z-index: 10;
+  }
   .screen-intro__offer {
     margin-bottom: 70px;
   }
@@ -158,8 +190,44 @@
     display: block;
     min-height: 140px;
   }
+  .wide-form__form--boss {
+    display: block;
+  }
+  .wide-form__form--boss-wrapper {
+    width: 80%;
+    min-height: auto;
+    margin: 0 auto 16px;
+  }
   .wide-form__form .form-control {
     margin-bottom: 16px;
+  }
+  .boss-info__wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 12px 4px;
+    margin-bottom: 20px;
+  }
+  .boss-info__img {
+    border: 1px solid black;
+    max-width: 50%;
+  }
+  .boss-info__text {
+    margin: auto;
+    text-align: center;
   }
   .four-card .group-grass {
     padding: 0 10vw;
@@ -167,8 +235,23 @@
   .four-card .group-grass__card-wrapper {
     margin-bottom: 20px;
   }
+  .catalog-intro__jutaLogo {
+    display: block;
+    float: none;
+    margin: 0 auto 20px;
+    text-align: center;
+  }
+  .catalog-intro__preview-heading span {
+    font-size: inherit;
+  }
   .addons__card {
     margin-bottom: 20px;
+  }
+  .addons__card:nth-child(odd) {
+    margin-right: 9%;
+  }
+  .addons__card:nth-child(even) {
+    margin-right: 0;
   }
   .addons__card-header {
     -webkit-box-orient: vertical;
@@ -237,6 +320,18 @@
   }
 }
 @media screen and (max-width: 767px) {
+  .screen-intro__site-heading {
+    font-size: 1.6em;
+  }
+  .screen-intro__offer {
+    font-size: 1.2em;
+  }
+  .screen-intro__reasons {
+    margin-top: 3vh;
+  }
+  .screen-intro__reasons-text {
+    font-size: 1.2em;
+  }
   .navbar-transparent .navbar-logo {
     max-width: 170px;
   }
@@ -248,12 +343,25 @@
     float: none;
     margin: 20px auto;
   }
+  .catalog-intro__preview-heading {
+    font-size: 36px;
+  }
+  .catalog-intro__preview-heading span {
+    font-size: inherit;
+  }
+  .catalog-intro__propouse {
+    border: none;
+    text-align: center;
+  }
   .addons__card {
     min-width: 300px;
     width: auto;
     max-width: 500px;
     margin: 0 auto 20px;
     float: none;
+  }
+  .addons__card:nth-child(odd) {
+    margin-right: auto;
   }
   .addons__card:nth-child(even) {
     margin-right: auto;
@@ -281,10 +389,17 @@
   }
   .gallery__img-wrapper {
     display: block;
-    width: 480px;
-    height: 450px;
+    width: 100%;
+    max-width: 400px;
+    height: 370px;
     margin: 0 auto 20px;
     float: none;
+  }
+  .promo__heading {
+    padding-right: 0;
+  }
+  .promo__logo {
+    text-align: center;
   }
   .direction {
     padding-bottom: 20px;
@@ -356,5 +471,31 @@
   }
   .feature__img {
     max-width: 182px;
+  }
+}
+@media screen and (max-height: 768px) {
+  .screen-intro {
+    max-height: 100vh;
+  }
+  .screen-intro__site-heading {
+    font-size: 1.6em;
+  }
+  .screen-intro__offer {
+    font-size: 1.2em;
+  }
+  .screen-intro__reasons {
+    margin-top: 3vh;
+  }
+  .screen-intro__reasons-text {
+    font-size: 1.2em;
+  }
+  .navbar-transparent .navbar-text {
+    font-size: 1.2em;
+  }
+  .navbar-transparent .phone-block {
+    font-size: 1.2em;
+  }
+  .wide-form__form-heading {
+    font-size: 2em;
   }
 }

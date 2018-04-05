@@ -19,10 +19,10 @@
 </head>
 
 <body>
-	<!-- start screen-intro -->
-	<div class="container-fluid screen-intro">
+	<!-- start fixed navbar	 -->
+	<div class="container-fluid" id="js-fixed-navbar">
 		<div class="container content-wrapper">
-			<div class="navbar-transparent">
+			<div class="navbar-transparent navbar-transparent-fixed">
 				<img src="img/logo-white.png" alt="Экоспорт - спортивные и детские площадки" class="navbar-logo paragraph-contrast">
 				<p class="hidden-xs navbar-text paragraph-contrast">trava-u-doma@gmail.com</p>
 				<p class="hidden-sm hidden-xs navbar-text paragraph-contrast">Есть вопросы?<span>Звоните!</span></p>
@@ -31,10 +31,30 @@
 					<button class="btn btn-primary main-button button-pointer" data-fancybox data-src="#form-callback" data-finfo="Заказать звонок(главная): модальное окно в шапке сайта" data-fmetrika="onsubmit='yaCounter35115650.reachGoal('header'); return true;'" data-fhead="Оставьте заявку до конца дня и зафиксируйте цену!" data-fdescript="С Вами свяжется наш менеджер в течение 14 минут для рассчета стоимости" href="javascript:;">заказать звонок</button>
 				</div>
 			</div>
-			<h1 class="col-lg-12 col-lg-offset-0 text-center screen-intro__site-heading text-contrast">Продажа и профессиональный монтаж искусственной травы <br> для детских и спортивных площадок</h1>
-			<p class="col-lg-12 col-lg-offset-0 text-center screen-intro__offer text-contrast">оказываем услуги по засыпке кварцевого песка и резинового гранулята</p>
+		</div>
+	</div>
+	<!-- end fixed navbar	 -->
+	<!-- start to top -->
+	<div id="js-top">
+		<a href="#top" id="up"><img src="img/up.svg" alt="наверх"></a>
+	</div>
+	<!-- end to top -->
+	<!-- start screen-intro -->
+	<div class="container-fluid screen-intro" id="top">
+		<div class="container content-wrapper">
+			<div class="navbar-transparent">
+				<img src="img/logo-white.png" alt="Экоспорт - спортивные и детские площадки" class="navbar-logo paragraph-contrast">
+				<p class="hidden-xs navbar-text paragraph-contrast">trava-u-doma@gmail.com</p>
+				<p class="hidden-sm hidden-xs navbar-text paragraph-contrast">Есть вопросы?<span>Звоните!</span></p>
+				<div class="phone-block">
+					<p class="nav-phone paragraph-contrast">тел: 8 (812) 748-32-64</p>
+					<button class="btn btn-primary main-button main-button--nav button-pointer" data-fancybox data-src="#form-callback" data-finfo="Заказать звонок(главная): модальное окно в шапке сайта" data-fmetrika="onsubmit='yaCounter35115650.reachGoal('header'); return true;'" data-fhead="Оставьте заявку до конца дня и зафиксируйте цену!" data-fdescript="С Вами свяжется наш менеджер в течение 14 минут для рассчета стоимости" href="javascript:;">заказать звонок</button>
+				</div>
+			</div>
+			<h1 class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center screen-intro__site-heading">Продажа и профессиональный монтаж искусственной травы <br> для детских и спортивных площадок</h1>
+			<p class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center screen-intro__offer">Оказываем услуги по засыпке кварцевого песка и резинового гранулята.<span>Работаем по всей России!</span></p>
 			<!-- start wide-form -->
-			<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-8 col-sm-offset-2 wide-form bg-white-transparent">
+			<div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0 wide-form">
 				<h3 class="wide-form__form-heading">Оставьте заявку до конца дня и зафиксируйте цену!</h3>
 				<p class="wide-form__description">С Вами свяжется наш менеджер в течение 14 минут для рассчета стоимости</p>
 				<form class="wide-form__form">
@@ -54,72 +74,27 @@
 					</div>
 				</form>
 				<p class="wide-form__description">Нажимая на кнопку, вы <a href="policy.html" target="_blank">даете согласие</a> на обработку своих персональных данных</p>
-				<p class="wide-form__success">Благодарим за заявку! Мы скоро свяжемся с Вами.</p>
+				<p class="wide-form__success hidden">Благодарим за заявку! Мы скоро свяжемся с Вами.</p>
 			</div>
 			<!-- end wide-form -->
-			<div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 screen-intro__reasons">
+			<div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 screen-intro__reasons">
 				<p class="screen-intro__reasons-text paragraph-contrast">Укладка до 500 м2<br>за 1 день!</p>
 				<p class="screen-intro__reasons-text paragraph-contrast">Монтаж от 150 руб/м2!</p>
-				<p class="screen-intro__reasons-text paragraph-contrast">Работаем по всей России!</p>
+				<!-- <p class="screen-intro__reasons-text paragraph-contrast">Работаем по всей России!</p> -->
 				<p class="screen-intro__reasons-text paragraph-contrast">Гарантия 5 лет!</p>
 			</div>
+			<!-- mouse -->
+			<div class="screen-intro__mouse hidden-xs">
+				<a href="#secondScreen" class="js-slideDown"><img class="slideDown" src="img/mouse.svg" alt=""></a>
+			</div>
+			<!-- mouse -->
 		</div>
 	</div>
 	<!-- end screen-intro -->
 	<!-- start four-card -->
-	<div class="container-fluid four-card b-padding">
+	<div class="container-fluid four-card b-padding" id="secondScreen">
 		<section class="container content-wrapper">
-			<h2 class="col-lg-8 b-heading">4 самые популярные модели искусственной травы</h2>
-			<p class="col-lg-10 col-md-12 b-description">В этом блоке представлены самые востребованные модели искусственной травы, которые используются при строительстве муниципальных и городских полей для мини-футбола и любительского футбола.</p>
-			<!-- <hr class="col-lg-12 divider"> -->
-			<!-- ol -->
-			<!-- <ol class="col-lg-12 b-description ordered-description">
-				start list
-				<li class="col-lg-12 ordered-list"><strong>Фибрилированная искусственная трава для мини-футбольных полей «Multisport 20»</strong>
-					<ul class="unordered-description">
-						<li>Длина ворса: 20 мм</li>
-						<li>Ditex: 5 200</li>
-						<li>Пр-во – Китай</li>
-					</ul>
-					<p class="col-lg-10 col-md-12 b-description availability">В наличии</p>
-					<p class="col-lg-10 col-md-12 b-description ordered-price">Цена от 1130 руб./м2 с монтажом и засыпкой кварцевого песка.</p>
-				</li>
-				end list
-				start list
-				<li class="col-lg-12 ordered-list"><strong>Монофиламентная искусственная трава для футбольных полей «Sportgrass 40»</strong>
-					<ul class="unordered-description">
-						<li>Длина ворса: 40 мм</li>
-						<li>Ditex: 8 800</li>
-						<li>Пр-во – Китай</li>
-					</ul>
-					<p class="col-lg-10 col-md-12 b-description availability">В наличии</p>
-					<p class="col-lg-10 col-md-12 b-description ordered-price">Цена от 1250 руб./м2 с монтажом и засыпкой кварцевого песка и резинового гранулята.</p>
-				</li>
-				end list
-				start list
-				<li class="col-lg-12 ordered-list"><strong>Фибрилированная искусственная трава для мини-футбольных полей «Effective 20»</strong>
-					<ul class="unordered-description">
-						<li>Длина ворса: 20 мм</li>
-						<li>Ditex: 6 600</li>
-						<li>Пр-во – Чехия</li>
-					</ul>
-					<p class="col-lg-10 col-md-12 b-description availability">В наличии</p>
-					<p class="col-lg-10 col-md-12 b-description ordered-price">Цена от 1340 руб./м2 с монтажом и засыпкой кварцевого песка.</p>
-				</li>
-				end list
-				start list
-				<li class="col-lg-12 ordered-list"><strong>Монофиламентная искусственная трава для футбольных полей «Pioneer 40»</strong>
-					<ul class="unordered-description">
-						<li>Длина ворса: 40 мм</li>
-						<li>Ditex: 11 000</li>
-						<li>Пр-во – Чехия</li>
-					</ul>
-					<p class="col-lg-10 col-md-12 b-description availability">В наличии</p>
-					<p class="col-lg-10 col-md-12 b-description ordered-price">Цена от 1440 руб./м2 с монтажом и засыпкой кварцевого песка и резинового гранулята.</p>
-				</li>
-				end list
-			</ol> -->
-			<!-- ol -->
+			<h2 class="col-xs-12 b-heading text-center">4 самые популярные модели искусственной травы</h2>
 			<!-- start group-grass -->
 			<div class="col-lg-6 col-md-12 col-xs-12 group-grass">
 				<div class="group-grass__header">
@@ -128,10 +103,10 @@
 				</div>
 				<!-- start card -->
 				<div class="col-lg-6 col-md-6 col-xs-12 group-grass__card-wrapper">
-					<div class="group-grass__card group-grass__card--green">
+					<div class="group-grass__card group-grass__card--red">
 						<a data-fancybox="card-gallery" href="img/card/card-1-full.jpg" data-caption="Multisport 20 (Высота ворса - 20мм, Количество стежков на 10 см - 260, Жесткость, dtex - 8 800 )" class="group-grass__img-wrapper">
 							<img src="img/card/card-1-thumb.jpg" alt="Монофиламентная искусственная трава для футбольных полей Sportgrass 40" class="group-grass__img">
-							<button class="group-grass__img-button">Посмотреть</button>
+							<button class="group-grass__img-button"><img src="img/zoom-in.svg" class="group-grass__img-icon"alt=""></button>
 						</a>
 						<h3 class="group-grass__card-heading">Multisport 20</h3>
 						<p class="group-grass__card-heading--description">Фибрилированная искусственная трава для мини-футбольных полей</p>
@@ -145,7 +120,7 @@
 								<!-- end row wrapper -->
 								<!-- start row wrapper -->
 								<div class="group-grass__row">
-									<p class="group-grass__content">Ditex:</p><p class="group-grass__content">5 200</p>
+									<p class="group-grass__content">DTEX:</p><p class="group-grass__content">5 000</p>
 								</div>
 								<!-- end row wrapper -->
 								<!-- start row wrapper -->
@@ -169,10 +144,10 @@
 				<!-- end card -->
 				<!-- start card -->
 				<div class="col-lg-6 col-md-6 col-xs-12 group-grass__card-wrapper">
-					<div class="group-grass__card group-grass__card--green">
+					<div class="group-grass__card group-grass__card--red">
 						<a data-fancybox="card-gallery" href="img/card/card-2-full.jpg" data-caption="Sportgrass 40 (Высота ворса - 40мм, Количество стежков на 10 см - 260, Жесткость, dtex - 8 800 )" class="group-grass__img-wrapper">
 							<img src="img/card/card-2-thumb.jpg" alt="Монофиламентная искусственная трава для футбольных полей Sportgrass 40" class="group-grass__img">
-							<button class="group-grass__img-button">Посмотреть</button>
+							<button class="group-grass__img-button"><img src="img/zoom-in.svg" class="group-grass__img-icon"alt=""></button>
 						</a>
 						<h3 class="group-grass__card-heading">Sportgrass 40</h3>
 						<p class="group-grass__card-heading--description">Монофиламентная искусственная трава для футбольных полей </p>
@@ -186,7 +161,7 @@
 								<!-- end row wrapper -->
 								<!-- start row wrapper -->
 								<div class="group-grass__row">
-									<p class="group-grass__content">Ditex:</p><p class="group-grass__content">8 800</p>
+									<p class="group-grass__content">DTEX:</p><p class="group-grass__content">8 000</p>
 								</div>
 								<!-- end row wrapper -->
 								<!-- start row wrapper -->
@@ -219,10 +194,10 @@
 				<!-- start card -->
 				<div class="col-lg-6 col-md-6 col-xs-12 group-grass__card-wrapper">
 					<div class="group-grass__card group-grass__card--cyan">
-						<a data-fancybox="card-gallery" href="img/card/card-1-full.jpg" data-caption="Multisport 20 (Высота ворса - 20мм, Количество стежков на 10 см - 260, Жесткость, dtex - 8 800 )" class="group-grass__img-wrapper">
-							<img src="img/card/card-1-thumb.jpg" alt="Монофиламентная искусственная трава для футбольных полей Sportgrass 40" class="group-grass__img">
+						<a data-fancybox="card-gallery" href="img/card/card-3-full.jpg" data-caption="Multisport 20 (Высота ворса - 20мм, Количество стежков на 10 см - 260, Жесткость, dtex - 8 800 )" class="group-grass__img-wrapper">
+							<img src="img/card/card-3-thumb.jpg" alt="Монофиламентная искусственная трава для футбольных полей Sportgrass 40" class="group-grass__img">
 							<img src="img/juta-logo-white.png" alt="Ютаграсс" class="watermark group-grass__watermark">
-							<button class="group-grass__img-button">Посмотреть</button>
+							<button class="group-grass__img-button"><img src="img/zoom-in.svg" class="group-grass__img-icon"alt=""></button>
 						</a>
 						<h3 class="group-grass__card-heading">Effective 20</h3>
 						<p class="group-grass__card-heading--description">Фибрилированная искусственная трава для мини-футбольных полей</p>
@@ -236,7 +211,7 @@
 								<!-- end row wrapper -->
 								<!-- start row wrapper -->
 								<div class="group-grass__row">
-									<p class="group-grass__content">Ditex:</p><p class="group-grass__content">6 600</p>
+									<p class="group-grass__content">DTEX:</p><p class="group-grass__content">6 000</p>
 								</div>
 								<!-- end row wrapper -->
 								<!-- start row wrapper -->
@@ -261,10 +236,10 @@
 				<!-- start card -->
 				<div class="col-lg-6 col-md-6 col-xs-12 group-grass__card-wrapper">
 					<div class="group-grass__card group-grass__card--cyan">
-						<a data-fancybox="card-gallery" href="img/card/card-2-full.jpg" data-caption="Sportgrass 40 (Высота ворса - 40мм, Количество стежков на 10 см - 260, Жесткость, dtex - 8 800 )" class="group-grass__img-wrapper">
-							<img src="img/card/card-2-thumb.jpg" alt="Монофиламентная искусственная трава для футбольных полей Sportgrass 40" class="group-grass__img">
+						<a data-fancybox="card-gallery" href="img/card/card-4-full.jpg" data-caption="Sportgrass 40 (Высота ворса - 40мм, Количество стежков на 10 см - 260, Жесткость, dtex - 8 800 )" class="group-grass__img-wrapper">
+							<img src="img/card/card-4-thumb.jpg" alt="Монофиламентная искусственная трава для футбольных полей Sportgrass 40" class="group-grass__img">
 							<img src="img/juta-logo-white.png" alt="Ютаграсс" class="watermark group-grass__watermark">
-							<button class="group-grass__img-button">Посмотреть</button>
+							<button class="group-grass__img-button"><img src="img/zoom-in.svg" class="group-grass__img-icon"alt=""></button>
 						</a>
 						<h3 class="group-grass__card-heading">Pioneer 40</h3>
 						<p class="group-grass__card-heading--description">Монофиламентная искусственная трава для футбольных полей</p>
@@ -278,7 +253,7 @@
 								<!-- end row wrapper -->
 								<!-- start row wrapper -->
 								<div class="group-grass__row">
-									<p class="group-grass__content">Ditex:</p><p class="group-grass__content">11 000</p>
+									<p class="group-grass__content">DTEX:</p><p class="group-grass__content">11 000</p>
 								</div>
 								<!-- end row wrapper -->
 								<!-- start row wrapper -->
@@ -302,20 +277,35 @@
 				<!-- end card -->
 			</div>
 			<!-- end group-grass -->
+			<hr class="col-lg-12 divider divider__opacity">
+			<p class="col-lg-12 col-md-12 b-description text-center">В этом блоке представлены самые востребованные модели искусственной травы, которые используются при строительстве муниципальных и городских полей для мини-футбола и любительского футбола.</p>
 		</section>
 	</div>
 	<!-- end four-card -->
+	<!-- start promo -->
+	<div class="container-fluid promo">
+		<section class="container content-wrapper promo__wrapper">
+			<div class="col-lg-12 col-xs-12 promo__logo">
+				<img src="img/logo-orig.jpg" alt="Экоспорт" class="promo__logo-img">
+			</div>
+			<div class="col-lg-12 col-xs-12 text-center promo__text">
+				<h3 class="promo__heading">Вы можете заказать <span>только</span> работу по укладке искусственной травы.</h3>
+				<p class="promo__description">Стоимость монтажа <span>от 150 руб./м<sup>2</sup></span> без учёта расходных материалов (клей, песок, крошка, шовная лента).</p>
+			</div>
+		</section>
+	</div>
+	<!-- end promo -->
 	<!-- start catalog-intro -->
 	<section class="container content-wrapper b-padding catalog-intro">
-		<h2 class="col-lg-7 col-md-7 b-heading">Полный каталог искусственной травы компании Jutagrass производство Чехия</h2>
-		<img src="img/jutagrass.png" alt="Ютаграс" class="col-lg-3 col-lg-offset-1 col-xs-12 catalog-intro__jutaLogo">
-		<p class="col-lg-7 col-xs-12 b-description">В этом блоке представлены все коллекции искусственной травы от европейской компании «JUTAgrass». Здесь Вы можете подобрать искусственную траву с нужными характеристиками, которая подойдет для Вашего вида спорта или ландшафтную искусственную траву.</p>
-		<hr class="col-lg-12 divider">
+		<h2 class="col-lg-7 col-md-7 col-sm-12 col-xs-12 b-heading">Полный каталог искусственной травы компании Jutagrass производство Чехия</h2>
+		<img src="img/jutagrass.png" alt="Ютаграс" class="col-lg-3 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-12 col-xs-12 catalog-intro__jutaLogo">
+		<p class="col-lg-7 col-md-12 col-xs-12 b-description">В этом блоке представлены все коллекции искусственной травы от европейской компании «JUTAgrass». Здесь Вы можете подобрать искусственную траву с нужными характеристиками, которая подойдет для Вашего вида спорта или ландшафтную искусственную траву.</p>
+		<hr class="col-lg-12 divider hidden-sm hidden-xs">
 		<!-- start catalog-card -->
 		<div class="col-lg-3 col-md-6 catalog-intro__catalog-card">
 			<div class="catalog-intro__preview-wrapper" onclick="window.open('amateur.html','_blank')" >
 				<img src="img/catalog/direction-football-amateur.jpg" alt="Футбол любительский" class="catalog-intro__preview-img">
-				<h3 class="catalog-intro__preview-heading">Футбол любительский</h3>
+				<h3 class="catalog-intro__preview-heading">Футбол <span>любительский</span></h3>
 			</div>
 			<a href="amateur.html" target="_blank" class="catalog-intro__link">подробнее</a>
 		</div>
@@ -324,7 +314,7 @@
 		<div class="col-lg-3 col-md-6 catalog-intro__catalog-card">
 			<div class="catalog-intro__preview-wrapper" onclick="window.open('prof.html','_blank')" >
 				<img src="img/catalog/direction-football-prof.jpg" alt="Футбол профессиональный" class="catalog-intro__preview-img">
-				<h3 class="catalog-intro__preview-heading">Футбол профессиональный</h3>
+				<h3 class="catalog-intro__preview-heading">Футбол <span>профессиональный</span></h3>
 			</div>
 			<a href="prof.html" target="_blank" class="catalog-intro__link">подробнее</a>
 		</div>
@@ -360,7 +350,7 @@
 		<div class="col-lg-3 col-md-6 catalog-intro__catalog-card">
 			<div class="catalog-intro__preview-wrapper" onclick="window.open('landscape.html','_blank')" >
 				<img src="img/catalog/direction-land.jpg" alt="Ландшафтный" class="catalog-intro__preview-img">
-				<h3 class="catalog-intro__preview-heading">Ландшафтный</h3>
+				<h3 class="catalog-intro__preview-heading">Ландшафтный дизайн</h3>
 			</div>
 			<a href="landscape.html" target="_blank" class="catalog-intro__link">подробнее</a>
 		</div>
@@ -377,124 +367,63 @@
 		<!-- start catalog-card -->
 		<div class="col-lg-3 col-md-6 catalog-intro__catalog-card">
 			<div class="catalog-intro__preview-wrapper" onclick="window.open('agility.html','_blank')" >
-				<img src="img/catalog/direction-hockey.jpg" alt="Аджилити" class="catalog-intro__preview-img">
+				<img src="img/catalog/direction-agility.jpg" alt="Аджилити" class="catalog-intro__preview-img">
 				<h3 class="catalog-intro__preview-heading">Аджилити</h3>
 			</div>
 			<a href="agility.html" target="_blank" class="catalog-intro__link">подробнее</a>
 		</div>
 		<!-- end catalog-card -->
+		<h3 class="col-xs-12 catalog-intro__propouse">При покупке искусственной травы <span>JUTAGRASS</span>, ВЫ можете заказать у <span>НАС</span> изготовление любой длины рулона, что обеспечивает <span>ВАМ</span> экономию на отсутствии обрезков искусственной травы и сопутствующих материалов при монтаже покрытия, тем самым Вы избегаете наличие лишних стыков, что повышает качество настилаемой площади.</h3>
 	</section>
 	<!-- end catalog-intro -->
 	<!-- start form-block -->
 	<div class="container-fluid form-block form-block__bg-1">
 		<div class="transparent-layer"></div>
 		<div class="container content-wrapper b-padding">
+			<!-- start boss info -->
+			<section class="col-lg-6 col-md-6 col-sm-12 col-xs-12 boss-info">
+				<div class="boss-info__wrapper">
+					<img src="img/boss.jpg" alt="текст про начальника" class="boss-info__img">
+					<div class="boss-info__text">
+						<h3 class="boss-info__heading">Главный начальник</h3>
+						<p class="boss-info__note">Самый крутой манагер в мИрррре!</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- start boss info -->
 			<!-- start wide-form -->
-			<section class="col-lg-10 col-lg-offset-1 wide-form">
+			<div class="col-lg-4 col-lg-offset-2 col-md-6 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-md-offset-0 wide-form">
 				<h3 class="wide-form__form-heading form-block__heading">Оставьте заявку до конца дня и зафиксируйте цену!</h3>
 				<p class="wide-form__description">С Вами свяжется наш менеджер в течение 14 минут для рассчета стоимости</p>
-				<form class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 wide-form__form">
+				<form class="row wide-form__form wide-form__form--boss">
 					<!-- Hidden Required Fields -->
 					<input type="hidden" name="project_name" value="Site Name">
 					<input type="hidden" name="admin_email" value="admin@mail.com">
 					<input type="hidden" name="form_subject" value="Form Subject">
 					<!-- END Hidden Required Fields -->
-					<div class="col-lg-3">
+					<div class="wide-form__form wide-form__form--boss-wrapper">
 						<input type="text" class="form-control" name="Name" placeholder="Ваше имя">
 					</div>
-					<div class="col-lg-3">
+					<div class="wide-form__form wide-form__form--boss-wrapper">
 						<input type="text" class="form-control masked-input" name="Phone" placeholder="Ваш номер телефона" required>
 					</div>
-					<div class="col-lg-3">
+					<div class="wide-form__form wide-form__form--boss-wrapper">
 						<button type="submit" class="btn btn-default form-button button-pointer">Отправить</button>
 					</div>
 				</form>
 				<p class="wide-form__description">Нажимая на кнопку, вы <a href="policy.html" target="_blank">даете согласие</a> на обработку своих персональных данных</p>
-				<p class="wide-form__success">Благодарим за заявку! Мы скоро свяжемся с Вами.</p>
-			</section>
+				<p class="wide-form__success hidden">Благодарим за заявку! Мы скоро свяжемся с Вами.</p>
+			</div>
 			<!-- end wide-form -->
 		</div>
 	</div>
 	<!-- end form-block -->
-	<!-- start addons -->
-	<div class="container-fluid addons b-padding">
-		<section class="container content-wrapper">
-			<h2 class="col-lg-8 b-heading">Сопутствующие материалы</h2>
-			<p class="col-lg-10 col-md-12 b-description">Вводный seo текст для поисковиков. Тут нужно вписать приветственный текст для раздела. Смысл этого абзаца - максимально донести информацию до посетителя о качестве, преимуществах и прочих выгодах. Корректно поданая информация - залог того, что посетитель будет достаточно заинтересован в приобретении товара.</p>
-			<hr class="col-lg-12 divider divider__opacity">
-			<!-- start addons__card -->
-			<div class="col-lg-5 col-md-6 col-sm-12 addons__card addons__card--maroon">
-				<div class="addons__card-header">
-					<img src="img/glue.jpg" alt="Полиуретановый клей" class="addons__card-img">
-					<p class="addons__card-heading">Полиуретановый клей</p>
-				</div>
-				<p class="addons__description">Двухкомпонентный клей для приклеивания искусственной травы.<br>Фасовка 13 кг.</p>
-				<div class="addons__card-footer">
-					<p class="addons__card-price">от <span>3 475</span> руб./шт</p>
-					<button class="btn btn-primary main-button button-pointer addons__card-button" data-fmetrika="onsubmit='yaCounter35115650.reachGoal('header'); return true;'" data-fhead="Оставьте заявку до конца дня и зафиксируйте цену!" data-fdescript="С Вами свяжется наш менеджер в течение 14 минут для рассчета стоимости" data-finfo="Заказать звонок: модальное окно в шапке сайта" href="javascript:;">заказать</button>
-				</div>
-			</div>
-			<!-- end addons__card -->
-			<!-- start addons__card -->
-			<div class="col-lg-5 col-lg-offset-2 col-md-6 col-md-offset-0 col-sm-12 addons__card addons__card--green">
-				<div class="addons__card-header">
-					<img src="img/rubber.jpg" alt="Резиновая крошка" class="addons__card-img">
-					<p class="addons__card-heading">Резиновая крошка</p>
-				</div>
-				<p class="addons__description">Резиновый гранулят для засыпки искусственной травы от высоты 40 мм. <br>Фракция 2-3 мм.</p>
-				<div class="addons__card-footer">
-					<p class="addons__card-price">от <span>18 000</span> руб./тонна</p>
-					<button class="btn btn-primary main-button button-pointer addons__card-button" data-fmetrika="onsubmit='yaCounter35115650.reachGoal('header'); return true;'" data-fhead="Оставьте заявку до конца дня и зафиксируйте цену!" data-fdescript="С Вами свяжется наш менеджер в течение 14 минут для рассчета стоимости" data-finfo="Заказать звонок: модальное окно в шапке сайта" href="javascript:;">заказать</button>
-				</div>
-			</div>
-			<!-- end addons__card -->
-			<hr class="col-lg-12 col-md-12 hidden-sm divider divider__opacity">
-			<hr class="col-lg-12 col-md-12 hidden-sm divider divider__opacity">
-			<!-- start addons__card -->
-			<div class="col-lg-5 col-md-6 col-sm-12 addons__card addons__card--cyan">
-				<div class="addons__card-header">
-					<img src="img/ribbon.jpg" alt="Шовная лента для склеивания рулонов" class="addons__card-img">
-					<p class="addons__card-heading">Шовная лента для склеивания рулонов</p>
-				</div>
-				<p class="addons__description">Лента для склеивания рулонов искусственной травы. <br> Ширина: 20-30 мм Рулон: 25 м.п</p>
-				<div class="addons__card-footer">
-					<p class="addons__card-price">от <span>4 950</span> руб./шт</p>
-					<button class="btn btn-primary main-button button-pointer addons__card-button" data-fmetrika="onsubmit='yaCounter35115650.reachGoal('header'); return true;'" data-fhead="Оставьте заявку до конца дня и зафиксируйте цену!" data-fdescript="С Вами свяжется наш менеджер в течение 14 минут для рассчета стоимости" data-finfo="Заказать звонок: модальное окно в шапке сайта" href="javascript:;">заказать</button>
-				</div>
-			</div>
-			<!-- end addons__card -->
-			<!-- start addons__card -->
-			<div class="col-lg-5 col-lg-offset-2 col-md-6 col-md-offset-0 col-sm-12 addons__card addons__card--sand">
-				<div class="addons__card-header">
-					<img src="img/sand.jpg" alt="Кварцевый песок" class="addons__card-img">
-					<p class="addons__card-heading">Кварцевый песок</p>
-				</div>
-				<p class="addons__description">Кварцевый песок для засыпки искусственной травы.<br>Фракция: 0,3-0,6 мм.</p>
-				<div class="addons__card-footer">
-					<p class="addons__card-price">от <span>3 145</span> руб./тонна</p>
-					<button class="btn btn-primary main-button button-pointer addons__card-button" data-fmetrika="onsubmit='yaCounter35115650.reachGoal('header'); return true;'" data-fhead="Оставьте заявку до конца дня и зафиксируйте цену!" data-fdescript="С Вами свяжется наш менеджер в течение 14 минут для рассчета стоимости" data-finfo="Заказать звонок: модальное окно в шапке сайта" href="javascript:;">заказать</button>
-				</div>
-			</div>
-			<!-- end addons__card -->
-		</section>
-	</div>
-	<!-- end addons -->
-	<!-- start promo -->
-	<div class="container-fluid b-padding promo">
-		<section class="container content-wrapper promo__wrapper">
-			<h3 class="col-lg-4 col-md-12 promo__heading">Вы можете заказать <span>только</span> работу по укладке искусственной травы.</h3>
-			<div class="col-lg-4 col-md-12 promo__logo">
-				<img src="img/logo-orig.jpg" alt="Экоспорт" class="center-block promo__logo-img">
-			</div>
-			<p class="col-lg-4 col-md-12 promo__description">Стоимость монтажа <span>от 150 руб./м<sup>2</sup></span> без учёта расходных материалов (клей, песок, крошка, шовная лента).</p>
-		</section>
-	</div>
-	<!-- end promo -->
 	<!-- start gallery -->
 	<div class="container-fluid b-padding gallery">
 		<section class="container content-wrapper">
-			<h2 class="col-lg-6 b-heading">Посмотрите примеры выполненных нами работ</h2>
-			<p class="col-lg-10 col-md-12 b-description">Вводный seo текст для поисковиков. Тут нужно вписать приветственный текст для раздела. Смысл этого абзаца - максимально донести информацию до посетителя о качестве, преимуществах и прочих выгодах. Корректно поданая информация - залог того, что посетитель будет достаточно заинтересован в приобретении товара.</p>
+			<h2 class="col-lg-12 b-heading text-center">Посмотрите примеры выполненных нами работ</h2>
+			<!-- <p class="col-lg-10 col-md-12 b-description">Вводный seo текст для поисковиков. Тут нужно вписать приветственный текст для раздела. Смысл этого абзаца - максимально донести информацию до посетителя о качестве, преимуществах и прочих выгодах. Корректно поданая информация - залог того, что посетитель будет достаточно заинтересован в приобретении товара.</p> -->
 			<hr class="col-lg-12 divider divider__opacity">
 			<hr class="col-lg-12 divider divider__opacity">
 			<!-- start gallery__row -->
@@ -596,32 +525,95 @@
 		</section>
 	</div>
 	<!-- end gallery -->
+	<!-- start addons -->
+	<div class="container-fluid addons">
+		<section class="container content-wrapper">
+			<h2 class="col-lg-12 b-heading text-center">Сопутствующие материалы</h2>
+			<!-- <p class="col-lg-10 col-md-12 b-description">Вводный seo текст для поисковиков. Тут нужно вписать приветственный текст для раздела. Смысл этого абзаца - максимально донести информацию до посетителя о качестве, преимуществах и прочих выгодах. Корректно поданая информация - залог того, что посетитель будет достаточно заинтересован в приобретении товара.</p> -->
+			<hr class="col-lg-12 divider divider__opacity">
+			<!-- start addons__card -->
+			<div class="col-lg-5 col-md-6 col-sm-12 addons__card addons__card--maroon">
+				<div class="addons__card-header">
+					<img src="img/glue.jpg" alt="Полиуретановый клей" class="addons__card-img">
+					<p class="addons__card-heading">Полиуретановый клей</p>
+				</div>
+				<p class="addons__description">Двухкомпонентный клей для приклеивания искусственной травы.<br>Фасовка 13 кг.</p>
+				<div class="addons__card-footer">
+					<p class="addons__card-price">от <span>3 475</span> руб./шт</p>
+					<button class="btn btn-primary main-button button-pointer addons__card-button" data-fmetrika="onsubmit='yaCounter35115650.reachGoal('header'); return true;'" data-fhead="Оставьте заявку до конца дня и зафиксируйте цену!" data-fdescript="С Вами свяжется наш менеджер в течение 14 минут для рассчета стоимости" data-finfo="Заказать звонок: модальное окно в шапке сайта" href="javascript:;">заказать</button>
+				</div>
+			</div>
+			<!-- end addons__card -->
+			<!-- start addons__card -->
+			<div class="col-lg-5 col-lg-offset-2 col-md-6 col-md-offset-0 col-sm-12 addons__card addons__card--green">
+				<div class="addons__card-header">
+					<img src="img/rubber.jpg" alt="Резиновая крошка" class="addons__card-img">
+					<p class="addons__card-heading">Резиновая крошка</p>
+				</div>
+				<p class="addons__description">Резиновый гранулят для засыпки искусственной травы от высоты 40 мм. <br>Фракция 2-3 мм.</p>
+				<div class="addons__card-footer">
+					<p class="addons__card-price">от <span>18 000</span> руб./тонна</p>
+					<button class="btn btn-primary main-button button-pointer addons__card-button" data-fmetrika="onsubmit='yaCounter35115650.reachGoal('header'); return true;'" data-fhead="Оставьте заявку до конца дня и зафиксируйте цену!" data-fdescript="С Вами свяжется наш менеджер в течение 14 минут для рассчета стоимости" data-finfo="Заказать звонок: модальное окно в шапке сайта" href="javascript:;">заказать</button>
+				</div>
+			</div>
+			<!-- end addons__card -->
+			<hr class="col-lg-12 col-md-12 hidden-sm divider divider__opacity">
+			<hr class="col-lg-12 col-md-12 hidden-sm divider divider__opacity">
+			<!-- start addons__card -->
+			<div class="col-lg-5 col-md-6 col-sm-12 addons__card addons__card--cyan">
+				<div class="addons__card-header">
+					<img src="img/ribbon.jpg" alt="Шовная лента для склеивания рулонов" class="addons__card-img">
+					<p class="addons__card-heading">Шовная лента для склеивания рулонов</p>
+				</div>
+				<p class="addons__description">Лента для склеивания рулонов искусственной травы. <br> Ширина: 20-30 мм Рулон: 25 м.п</p>
+				<div class="addons__card-footer">
+					<p class="addons__card-price">от <span>4 950</span> руб./шт</p>
+					<button class="btn btn-primary main-button button-pointer addons__card-button" data-fmetrika="onsubmit='yaCounter35115650.reachGoal('header'); return true;'" data-fhead="Оставьте заявку до конца дня и зафиксируйте цену!" data-fdescript="С Вами свяжется наш менеджер в течение 14 минут для рассчета стоимости" data-finfo="Заказать звонок: модальное окно в шапке сайта" href="javascript:;">заказать</button>
+				</div>
+			</div>
+			<!-- end addons__card -->
+			<!-- start addons__card -->
+			<div class="col-lg-5 col-lg-offset-2 col-md-6 col-md-offset-0 col-sm-12 addons__card addons__card--sand">
+				<div class="addons__card-header">
+					<img src="img/sand.jpg" alt="Кварцевый песок" class="addons__card-img">
+					<p class="addons__card-heading">Кварцевый песок</p>
+				</div>
+				<p class="addons__description">Кварцевый песок для засыпки искусственной травы.<br>Фракция: 0,3-0,6 мм.</p>
+				<div class="addons__card-footer">
+					<p class="addons__card-price">от <span>3 145</span> руб./тонна</p>
+					<button class="btn btn-primary main-button button-pointer addons__card-button" data-fmetrika="onsubmit='yaCounter35115650.reachGoal('header'); return true;'" data-fhead="Оставьте заявку до конца дня и зафиксируйте цену!" data-fdescript="С Вами свяжется наш менеджер в течение 14 минут для рассчета стоимости" data-finfo="Заказать звонок: модальное окно в шапке сайта" href="javascript:;">заказать</button>
+				</div>
+			</div>
+			<!-- end addons__card -->
+		</section>
+	</div>
+	<!-- end addons -->
 	<!-- start form-block -->
-	<div class="container-fluid form-block form-block__bg-2">
+	<div class="container-fluid form-block form-block__bg-3">
 		<div class="transparent-layer"></div>
 		<div class="container content-wrapper b-padding">
 			<!-- start wide-form -->
-			<section class="col-lg-10 col-lg-offset-1 wide-form">
-				<h3 class="wide-form__form-heading form-block__heading">Оставьте заявку до конца дня и зафиксируйте цену!</h3>
+			<section class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-8 col-sm-offset-2 wide-form">
+				<h3 class="wide-form__form-heading">Оставьте заявку до конца дня и зафиксируйте цену!</h3>
 				<p class="wide-form__description">С Вами свяжется наш менеджер в течение 14 минут для рассчета стоимости</p>
-				<form class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0 col-sm-8 col-sm-offset-2 wide-form__form">
+				<form class="wide-form__form">
 					<!-- Hidden Required Fields -->
 					<input type="hidden" name="project_name" value="Site Name">
 					<input type="hidden" name="admin_email" value="admin@mail.com">
 					<input type="hidden" name="form_subject" value="Form Subject">
 					<!-- END Hidden Required Fields -->
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3 col-sm-12">
 						<input type="text" class="form-control" name="Name" placeholder="Ваше имя">
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3 col-sm-12">
 						<input type="text" class="form-control masked-input" name="Phone" placeholder="Ваш номер телефона" required>
 					</div>
-					<div class="col-lg-3">
+					<div class="col-lg-3 col-md-3 col-sm-12">
 						<button type="submit" class="btn btn-default form-button button-pointer ">Отправить</button>
 					</div>
 				</form>
 				<p class="wide-form__description">Нажимая на кнопку, вы <a href="policy.html" target="_blank">даете согласие</a> на обработку своих персональных данных</p>
-				<p class="wide-form__success">Благодарим за заявку! Мы скоро свяжемся с Вами.</p>
+				<p class="wide-form__success hidden">Благодарим за заявку! Мы скоро свяжемся с Вами.</p>
 			</section>
 			<!-- end wide-form -->
 		</div>
@@ -656,9 +648,9 @@
 				<p class="site-footer__text">Россия, Санкт-Петербург, Учительская улица, 23</p>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-12 site-footer__item site-footer__item--center">
-				<p class="site-footer__text">© Искуственная-трава.рф</p>
-				<p class="site-footer__text">Все права соблюдены</p>
-				<p class="site-footer__text">Копирование информации недопустимо</p>
+				<p class="site-footer__text">Общество с ограниченной ответственностью<br>«Современные технологии»</p>
+				<p class="site-footer__text">ОГРН  1177847256696</p>
+				<p class="site-footer__text">ИНН  7804604020<br>КПП  780401001</p>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-12 site-footer__item site-footer__item--right">
 				<p class="site-footer__text"><a href="policy.html" target="_blank">Политика конфиденциальности</a></p>

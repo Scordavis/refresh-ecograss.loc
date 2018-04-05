@@ -68,18 +68,76 @@ $(document).ready(function() {
 				url: "js/mail.php", //Change
 				data: th.serialize()
 			}).done(function() {
-				$('.wide-form__success').addClass('active');
+				$('.wide-form__description').addClass('hidden');
+				$('.wide-form__success').removeClass('hidden');
 				$('.modal-form__thanks').addClass('active');
 				setTimeout(function() {
 					// Done Functions
 					th.trigger("reset");
 					$.fancybox.close();
-					$('.wide-form__success').removeClass('active');
+					$('.wide-form__description').removeClass('hidden');
+					$('.wide-form__success').addClass('hidden');
 					$('.modal-form__thanks').removeClass('active');
 				}, 5000);
 			});
 			return false;
 		});
+
+
+
+
+	// fixed navbar
+	jQuery(function(f){
+		var element = f('#js-fixed-navbar');
+		f(window).scroll(function(){
+			element['fade'+ (f(this).scrollTop() > 600 ? 'In': 'Out')](500);
+		});
+	});
+
+	// fixed to top
+	jQuery(function(f){
+		var element = f('#js-top');
+		f(window).scroll(function(){
+			element['fade'+ (f(this).scrollTop() > 600 ? 'In': 'Out')](500);
+		});
+	});
+
+
+
+	// smooth
+// 	$(function() {
+
+//   $('#up').click(function() {
+//     $('body,html').animate({scrollTop:0},500);
+//     return false;
+//   })
+
+// });
+
+	$("a.js-slideDown").click(function() {
+		$("html, body").animate({
+			scrollTop: $($(this).attr("href")).offset().top + "px"
+		}, {
+			duration: 500,
+			easing: "swing"
+		});
+		return false;
+	});
+
+	$("#up").click(function() {
+		$("html, body").animate({
+			scrollTop: $($(this).attr("href")).offset().top + "px"
+		}, {
+			duration: 500,
+			easing: "swing"
+		});
+		return false;
+	});
+
+
+
+
+
 
 
 		var headertext = [],
@@ -96,63 +154,6 @@ $(document).ready(function() {
 				col.setAttribute("data-th", headertext[j]);
 			}
 		};
-
-
-
-//  $(function() {
-
-
-//   document.getElementById('third-form-attach').addEventListener('submit', function(evt){
-//     var http = new XMLHttpRequest(), f = this;
-//     var th = $(this);
-//     evt.preventDefault();
-//     http.open("POST", "js/mail.php", true);
-//     http.onreadystatechange = function() {
-//       if (http.readyState == 4 && http.status == 200) {
-//         $('.vertical-form__form, .vertical-form__thanks').addClass('active');
-//         setTimeout(function() {
-//           // Done Functions
-//           th.trigger("reset");
-//           $.fancybox.close();
-//         }, 5000);
-//       }
-//     };
-//     http.onerror = function() { alert('Извините, данные не были переданы'); }
-//     http.send(new FormData(f));
-//   }, false);
-
-// });
-
-
-
-//   $(function() {
-
-
-//   document.getElementById('form-modal').addEventListener('submit', function(evt){
-//     var http = new XMLHttpRequest(), f = this;
-//     var th = $(this);
-//     evt.preventDefault();
-//     http.open("POST", "js/mail.php", true);
-//     http.onreadystatechange = function() {
-//       if (http.readyState == 4 && http.status == 200) {
-//         $('.vertical-form__thanks').addClass('active');
-//         setTimeout(function() {
-//           // Done Functions
-//           th.trigger("reset");
-//           $.fancybox.close();
-//         }, 5000);
-//       }
-//     }
-//     http.onerror = function() { alert('Извините, данные не были переданы'); }
-//     http.send(new FormData(f));
-//   }, false);
-
-// });
-
-
-
-
-
 
 
 
