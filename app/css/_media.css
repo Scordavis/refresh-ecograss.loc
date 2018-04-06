@@ -67,6 +67,33 @@
     display: block;
     position: relative;
   }
+  .navbar-transparent-fixed {
+    height: 60px;
+    min-height: 1px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 4px;
+  }
+  .navbar-transparent-fixed .navbar-logo {
+    max-width: 180px;
+  }
+  .navbar-transparent-fixed .navbar-text {
+    font-size: 16px;
+  }
+  .navbar-transparent-fixed .phone-block .nav-phone {
+    font-size: 21px;
+    margin-bottom: 0;
+  }
   .addons__card {
     width: 45%;
   }
@@ -175,6 +202,33 @@
     color: white;
     z-index: 10;
   }
+  .navbar-transparent-fixed {
+    height: 60px;
+    min-height: 1px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 4px;
+  }
+  .navbar-transparent-fixed .navbar-logo {
+    max-width: 180px;
+  }
+  .navbar-transparent-fixed .navbar-text {
+    font-size: 18px;
+  }
+  .navbar-transparent-fixed .phone-block .nav-phone {
+    font-size: 21px;
+    margin-bottom: 0;
+  }
   .screen-intro__offer {
     margin-bottom: 70px;
   }
@@ -222,8 +276,8 @@
     margin-bottom: 20px;
   }
   .boss-info__img {
-    border: 1px solid black;
     max-width: 50%;
+    border: 1px solid black;
   }
   .boss-info__text {
     margin: auto;
