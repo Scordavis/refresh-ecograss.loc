@@ -68,14 +68,14 @@ $(document).ready(function() {
 				url: "js/mail.php", //Change
 				data: th.serialize()
 			}).done(function() {
-				$('.wide-form__description').addClass('hidden');
+				$('.wide-form__description--policy').addClass('hidden');
 				$('.wide-form__success').removeClass('hidden');
 				$('.modal-form__thanks').addClass('active');
 				setTimeout(function() {
 					// Done Functions
 					th.trigger("reset");
 					$.fancybox.close();
-					$('.wide-form__description').removeClass('hidden');
+					$('.wide-form__description--policy').removeClass('hidden');
 					$('.wide-form__success').addClass('hidden');
 					$('.modal-form__thanks').removeClass('active');
 				}, 5000);
@@ -113,6 +113,8 @@ $(document).ready(function() {
 //   })
 
 // });
+
+	$('.js-equalheight').equalHeights();
 
 	$("a.js-slideDown").click(function() {
 		$("html, body").animate({

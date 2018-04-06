@@ -47,12 +47,12 @@ body{
 
 }
 .b-padding{
-	padding-top: 160px;
-	padding-bottom: 160px;
+	padding-top: 100px;
+	padding-bottom: 100px;
 
 }
 .b-heading{
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 	font-family: @secondFont;
 	font-size: 36px;
 	font-weight: @bold;
@@ -63,6 +63,11 @@ body{
 .b-description{
 	margin-bottom: 40px;
 	color: lighten(black, 40%);
+	&--anno{
+		color: black;
+		font-size: 24px;
+
+	}
 	&--typo{
 		color: black;
 		margin-bottom: 20px;
@@ -296,24 +301,28 @@ body{
 	&__site-heading{
 		margin-top: 5vh;
 		margin-bottom: 0;
-		padding: 10px 6px;
-		background-color: fade(@yellowColor, 80%);
+		padding: 20px;
+		background-color: fade(white, 50%);
 		color: lighten(black, 16%);
 		font-size: 40px;
 		font-family: @secondFont;
 		font-weight: @bold;
+		text-shadow: -1px -1px 0px #ffffff;
+		span{
+			display: block;
+			text-align: center;
+		}
 
 	}
 	&__offer{
 		margin-top: 3vh;
 		margin-bottom: 5vh;
 		padding: 8px;
-		background-color: fade(@headingColor, 90%);
+		background-color: fade(@yellowColor, 80%);
+		color: lighten(black, 16%);
+		font-family: @secondFont;
 		font-size: 32px;
-		span{
-			display: block;
-			text-align: center;
-		}
+		font-weight: @med;
 
 	}
 	&__reasons{
@@ -323,9 +332,11 @@ body{
 
 	}
 	&__reasons-text{
-		font-size: 28px;
+		font-family: @secondFont;
+		font-size: 29px;
 		font-weight: @bold;
 		text-align: center;
+		line-height: 1.2;
 
 	}
 	// mouse
@@ -387,9 +398,33 @@ body{
 	position: fixed;
 	display: none;
 	width: 100%;
-	background-color: @headingColor;
+	height: 70px;
+	background-color: fade(@headingColor, 70%);
 	color: white;
 	z-index: 10;
+
+}
+.navbar-transparent-fixed{
+	height: 60px;
+	min-height: 1px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 4px;
+	.navbar-logo{
+		max-width: 180px;
+	}
+	.navbar-text{
+		font-size: 24px;
+
+	}
+	.phone-block{
+		.nav-phone{
+			font-size: 21px;
+			margin-bottom: 0;
+		}
+
+	}
 
 }
 // end navbar
@@ -397,7 +432,7 @@ body{
 // wide-form
 .wide-form{
 	padding: 0 14px;
-	background-color: fade(#071735, 88%);
+	background-color: fade(@headingColor, 90%);
 	color: white;
 	font-size: 14px;
 	text-align: center;
@@ -440,7 +475,8 @@ body{
 	}
 	&__success{
 		width: fit-content;
-		margin: auto;
+		margin: 0 auto 8px;
+		color: black;
 		clear: both;
 		padding: 4px 6px;
 		background-color: @yellowColor;
@@ -582,8 +618,8 @@ body{
 			position: absolute;
 			max-width: 200px;
 			right: 0;
-			top: 0;
-			margin: 30px 10px;
+			bottom: 0;
+			margin: 10px;
 			opacity: 1;
 			.transition(.3s);
 
@@ -620,13 +656,13 @@ body{
 			margin-bottom: 0px;
 				&:first-child{
 					float: left;
-					width: 74%;
+					width: 60%;
 					text-align: left;
 
 				}
 				&:last-child{
 					float: right;
-					width: 24%;
+					width: 38%;
 					text-align: right;
 
 				}
@@ -801,21 +837,22 @@ body{
 .boss-info{
 	&__wrapper{
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: flex-start;
-		align-items: flex-start;
-		padding: 4px;
+		align-items: center;
+		padding: 12px 20px;
 		background-color: white;
 		color: black;
 
 	}
 	&__img{
-		border: 1px solid black;
-		max-width: 400px;
+		max-width: 200px;
+		margin-bottom: 8px;
+		border: 1px solid @headingColor;
 
 	}
 	&__text{
-		margin-left: 8px;
+		text-align: center;
 
 	}
 	&__heading{}
